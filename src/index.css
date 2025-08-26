@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SniperTrader Design System - Professional Trading Platform
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Trading Color Palette */
+    --background: 220 23% 5%;
+    --foreground: 45 100% 85%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 45 100% 90%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 45 100% 90%;
+
+    /* Gold Primary Theme */
+    --primary: 45 100% 50%;
+    --primary-foreground: 220 23% 5%;
+    --primary-glow: 45 100% 65%;
+
+    /* Navy Secondary */
+    --secondary: 215 50% 15%;
+    --secondary-foreground: 45 100% 85%;
+
+    /* Muted Tones */
+    --muted: 220 15% 12%;
+    --muted-foreground: 45 20% 65%;
+
+    /* Accent Gold */
+    --accent: 45 90% 45%;
+    --accent-foreground: 220 23% 5%;
+
+    /* Status Colors */
+    --success: 120 60% 50%;
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI Elements */
+    --border: 220 15% 15%;
+    --input: 220 15% 12%;
+    --ring: 45 100% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(220 23% 3%));
+    --gradient-gold: linear-gradient(45deg, hsl(45 100% 45%), hsl(45 100% 65%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 23% 3% / 0.5);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Light mode (trading hours) */
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 220 23% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 23% 15%;
+    --border: 220 13% 85%;
+    --input: 220 13% 90%;
+    --muted: 45 20% 95%;
+    --muted-foreground: 220 15% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background: linear-gradient(135deg, hsl(var(--background)), hsl(220 23% 3%));
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Trading Chart Animations */
+  .chart-glow {
+    filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.5));
+  }
+  
+  .gold-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Hero Text Effects */
+  .hero-text {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Interactive Elements */
+  .trading-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    transition: all 0.3s ease;
+  }
+  
+  .trading-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+    border-color: hsl(var(--primary) / 0.5);
+  }
+}
