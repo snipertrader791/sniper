@@ -12,6 +12,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+   <url>
+    <loc>https://snipertrader.online/types</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://snipertrader.online/contact</loc>
     <lastmod>2025-09-08</lastmod>
